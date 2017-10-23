@@ -1,0 +1,14 @@
+-------------------------------------------------------------
+Fake Tracing Service Instance Created at 10/17/2017 5:36:39 PM
+https://github.com/AshV/Dynamics365ConsoleCaller 
+
+10/17/2017 5:36:39 PM -> Starting Configuration Parsing.
+10/17/2017 5:36:39 PM -> Error while connecting to CRM Object reference not set to an instance of an object.
+10/17/2017 5:36:39 PM -> Started exporting IKEA_WebResources
+10/17/2017 5:36:39 PM -> Object reference not set to an instance of an object.
+10/17/2017 5:36:39 PM -> Started exporting IKEA_Configurations
+10/17/2017 5:36:39 PM -> Object reference not set to an instance of an object.
+10/17/2017 5:36:39 PM -> Started exporting IKEA_Assemblies
+10/17/2017 5:36:39 PM -> Object reference not set to an instance of an object.
+10/17/2017 5:36:39 PM -> Started exporting IKEA_Processes
+10/17/2017 5:36:39 PM -> Object reference not set to an instance of an object.
