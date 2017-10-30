@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ExportConfiguration>  <Solutions>
+<ExportConfiguration>
+  <Connection UID="Ikeadevuser1@GDCRMDomain.onmicrosoft.com" PWD="ikea@366" EndPoint="https://ikeadev1.api.crm5.dynamics.com/XRMServices/2011/Organization.svc"/>
+  <Solutions>
     <Solution UniqueName="dd" Version="sds" Managed="fff" ExportedName="f"/>
     <Solution UniqueName="dd" Version="sds" Managed="fff" ExportedName="f"/>
     <Solution UniqueName="dd" Version="sds" Managed="fff" ExportedName="f"/>
