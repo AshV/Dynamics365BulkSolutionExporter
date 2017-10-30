@@ -61,6 +61,7 @@
     <Compile Include="ExecuteAsyncExtension.cs" />
     <Compile Include="ExportConfiguration.cs" />
     <Compile Include="ExportSolution.cs" />
+    <Compile Include="GlobalServiceObject.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,6 +76,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="TimeoutError.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

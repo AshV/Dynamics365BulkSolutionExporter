@@ -40,9 +40,9 @@ namespace ExportSolution
                 exportSolutionRequest.Managed = Convert.ToBoolean(solution.Managed);
                 exportSolutionRequest.SolutionName = solution.UniqueName;
 
-                var exportSolutionResponse = await orgService.ExecuteAsync<ExportSolutionResponse>(exportSolutionRequest, logger);
+                //   var exportSolutionResponse = await orgService.ExecuteAsync<ExportSolutionResponse>(exportSolutionRequest, logger);
 
-                // var exportSolutionResponse = (ExportSolutionResponse)orgService.Execute(exportSolutionRequest);
+                var exportSolutionResponse = (ExportSolutionResponse)orgService.Execute(exportSolutionRequest);
                 byte[] exportXml = exportSolutionResponse.ExportSolutionFile;
 
                 string filename = $"{solution.UniqueName}{FormatVersion(solution.Version)}.zip";

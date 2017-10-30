@@ -21,13 +21,17 @@ namespace ExportSolution
 
                 var configuration = ExportSolution.ParseConfigurationAndConnectToCRM(logger, args[0]);
 
-                var orgService = Connect.GetOrganizationService(
+                GlobalServiceObject.configuration = configuration;
+
+                GlobalServiceObject.logger = logger;
+
+                GlobalServiceObject.orgService = Connect.GetOrganizationService(
                     configuration.Connection.UID,
                     configuration.Connection.PWD,
                     configuration.Connection.EndPoint,
                     logger);
 
-                var sols = orgService.RetrieveMultiple(new QueryExpression("solution")
+                var sols = GlobalServiceObject.orgService.RetrieveMultiple(new QueryExpression("solution")
                 {
                     ColumnSet = new ColumnSet(true),
                     Criteria = new FilterExpression
@@ -58,7 +62,7 @@ namespace ExportSolution
                 });
 
                 ExportSolution.ExportAllSolutions(
-                    orgService,
+                    GlobalServiceObject.orgService,
                     logger,
                     new ExportConfiguration()
                     {
