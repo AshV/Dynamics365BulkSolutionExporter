@@ -34,7 +34,7 @@ namespace ExportSolution
                     {
                         Conditions =
                         {
-                            new ConditionExpression(nameof(Solution.IsManaged).ToLower(),ConditionOperator.Equal,true)
+                            new ConditionExpression(nameof(Solution.IsManaged).ToLower(),ConditionOperator.Equal,false)
                         }
                     }
                 });
@@ -44,12 +44,17 @@ namespace ExportSolution
                 sols.Entities.ToList().ForEach(sol =>
                 {
                     var s = sol.ToEntity<Solution>();
-                    exportSolutionData.Add(new ExportConfigurationSolution
+                    if (!s.UniqueName.Contains("Active")
+                    && !s.UniqueName.Contains("Default")
+                    && !s.UniqueName.Contains("Basic"))
                     {
-                        UniqueName = s.UniqueName,
-                        Version = s.Version,
-                        Managed = "false"
-                    });
+                        exportSolutionData.Add(new ExportConfigurationSolution
+                        {
+                            UniqueName = s.UniqueName,
+                            Version = s.Version,
+                            Managed = "false"
+                        });
+                    }
                 });
 
                 ExportSolution.ExportAllSolutions(
