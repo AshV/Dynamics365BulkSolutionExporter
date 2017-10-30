@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IS", "IS\IS.csproj", "{D26ACD94-2770-466F-8C41-6BD3D96B4B6A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportSolution", "ExportSolution.csproj", "{D26ACD94-2770-466F-8C41-6BD3D96B4B6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC676144-C079-49DF-9415-D0B86058F4EA}
 	EndGlobalSection
 EndGlobal

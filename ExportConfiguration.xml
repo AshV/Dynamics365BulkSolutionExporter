@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ExportConfiguration>
+  <Connection UID="" PWD="" EndPoint=""/>
+  <Solutions>
+    <Solution UniqueName="" Managed="false"/>
+    <Solution UniqueName="" Managed="false"/>
+    <Solution UniqueName="" Managed="false"/>
+    <Solution UniqueName="" Managed="false"/>
+  </Solutions>
+  <ExportPath>..\..\PkgFolder</ExportPath>
+  <ExtractScript>..\..\Extract.bat</ExtractScript>
+  <ExtractScriptArgs>..\..\..\</ExtractScriptArgs>
+</ExportConfiguration>

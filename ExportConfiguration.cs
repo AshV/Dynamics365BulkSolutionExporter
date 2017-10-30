@@ -15,6 +15,8 @@ public partial class ExportConfiguration
 
     private string extractScriptField;
 
+    private string extractScriptArgsField;
+
     /// <remarks/>
     public ExportConfigurationConnection Connection
     {
@@ -65,6 +67,19 @@ public partial class ExportConfiguration
         set
         {
             this.extractScriptField = value;
+        }
+    }
+
+    /// <remarks/>
+    public string ExtractScriptArgs
+    {
+        get
+        {
+            return this.extractScriptArgsField;
+        }
+        set
+        {
+            this.extractScriptArgsField = value;
         }
     }
 }

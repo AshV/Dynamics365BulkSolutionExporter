@@ -1,33 +1,32 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace IS
+namespace ExportSolution
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var tracingService = Connect.GetTracingService("Logs");
+            var logger = Connect.GetLoggingService("Logs");
             try
             {
                 if (args.Length == 0)
                 {
-                    tracingService.Trace("Please pass path to configuration file in Command Line Argument");
+                    logger.Log("Please pass path to configuration file in Command Line Argument");
                     return;
                 }
 
-                var configuration = ExportSolution.ParseConfigurationAndConnectToCRM(tracingService, args[0]);
+                var configuration = ExportSolution.ParseConfigurationAndConnectToCRM(logger, args[0]);
 
                 var orgService = Connect.GetOrganizationService(
                     configuration.Connection.UID,
                     configuration.Connection.PWD,
                     configuration.Connection.EndPoint,
-                    tracingService);
+                    logger);
 
-                ExportSolution.ExportAllSolutions(orgService, tracingService, configuration);
+                ExportSolution.ExportAllSolutions(orgService, logger, configuration);
 
-                if (!string.IsNullOrEmpty(configuration.ExtractScript))
-                    Process.Start(configuration.ExtractScript);
+                ExportSolution.ExecuteExtractScript(logger, configuration);
             }
             catch (Exception ex)
             {
@@ -37,7 +36,7 @@ namespace IS
                 // Get the line number from the stack frame
                 var line = frame.GetFileLineNumber();
 
-                tracingService.Trace($"Exception Log : {ex.Message}, {st}, {frame}, {line}");
+                logger.Log($"Exception Log : {ex.Message}, {st}, {frame}, {line}");
             }
         }
     }
