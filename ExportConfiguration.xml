@@ -1,14 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ExportConfiguration>
-  <Connection UID="@GDCRMDomain.onmicrosoft.com" PWD="@366" EndPoint="https://.api.crm5.dynamics.com/XRMServices/2011/Organization.svc"/>
+  <Connection UID="" PWD="" EndPoint=""/>
   <Solutions>
-    <Solution UniqueName="dd" Version="sds" Managed="fff" ExportedName="f"/>
-    <Solution UniqueName="dd" Version="sds" Managed="fff" ExportedName="f"/>
-    <Solution UniqueName="dd" Version="sds" Managed="fff" ExportedName="f"/>
-    <Solution UniqueName="dd" Version="sds" Managed="fff" ExportedName="f"/>
-    <Solution UniqueName="dd" Version="sds" Managed="fff" ExportedName="f"/>
+    <Solution UniqueName="" Version="" Managed="" ExportedName=""/>
   </Solutions>
-  <ExportPath>Solutions</ExportPath>
-  <ExtractScript>..\..\Extract.bat</ExtractScript>
-  <ExtractScriptArgs>..\..\..\</ExtractScriptArgs>
+  <ExportPath></ExportPath>
+  <ExtractScript></ExtractScript>
+  <ExtractScriptArgs></ExtractScriptArgs>
 </ExportConfiguration>
