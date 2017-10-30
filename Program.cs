@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Microsoft.Xrm.Sdk.Query;
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 
 namespace ExportSolution
 {
@@ -24,9 +27,43 @@ namespace ExportSolution
                     configuration.Connection.EndPoint,
                     logger);
 
-                ExportSolution.ExportAllSolutions(orgService, logger, configuration);
+                var sols = orgService.RetrieveMultiple(new QueryExpression("solution")
+                {
+                    ColumnSet = new ColumnSet(true),
+                    Criteria = new FilterExpression
+                    {
+                        Conditions =
+                        {
+                            new ConditionExpression(nameof(Solution.IsManaged).ToLower(),ConditionOperator.Equal,true)
+                        }
+                    }
+                });
 
-                ExportSolution.ExecuteExtractScript(logger, configuration);
+                var exportSolutionData = new List<ExportConfigurationSolution>();
+
+                sols.Entities.ToList().ForEach(sol =>
+                {
+                    var s = sol.ToEntity<Solution>();
+                    exportSolutionData.Add(new ExportConfigurationSolution
+                    {
+                        UniqueName = s.UniqueName,
+                        Version = s.Version,
+                        Managed = "false"
+                    });
+                });
+
+                ExportSolution.ExportAllSolutions(
+                    orgService,
+                    logger,
+                    new ExportConfiguration()
+                    {
+                        Solutions = exportSolutionData.ToArray()
+                    });
+
+
+                //  ExportSolution.ExportAllSolutions(orgService, logger, configuration);
+
+                //   ExportSolution.ExecuteExtractScript(logger, configuration);
             }
             catch (Exception ex)
             {

@@ -149,7 +149,11 @@ public partial class ExportConfigurationSolution
 
     private string uniqueNameField;
 
-    private bool managedField;
+    private string versionField;
+
+    private string managedField;
+
+    private string exportedNameField;
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
@@ -167,7 +171,21 @@ public partial class ExportConfigurationSolution
 
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public bool Managed
+    public string Version
+    {
+        get
+        {
+            return this.versionField;
+        }
+        set
+        {
+            this.versionField = value;
+        }
+    }
+
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string Managed
     {
         get
         {
@@ -176,6 +194,20 @@ public partial class ExportConfigurationSolution
         set
         {
             this.managedField = value;
+        }
+    }
+
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string ExportedName
+    {
+        get
+        {
+            return this.exportedNameField;
+        }
+        set
+        {
+            this.exportedNameField = value;
         }
     }
 }

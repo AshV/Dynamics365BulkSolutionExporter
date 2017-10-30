@@ -31,27 +31,27 @@ namespace ExportSolution
             return importConfig;
         }
 
-        public static async Task<bool> ExportSolutionZip(IOrganizationService orgService, Logger logger, string solutionUniqueName, bool managed, string exportPath = "")
+        private static async Task<bool> ExportSolutionZip(IOrganizationService orgService, Logger logger, ExportConfigurationSolution solution, string exportPath = "")
         {
             try
             {
-                logger.Log($"Started exporting {solutionUniqueName}");
+                logger.Log($"Started exporting {solution.UniqueName}");
                 var exportSolutionRequest = new ExportSolutionRequest();
-                exportSolutionRequest.Managed = managed;
-                exportSolutionRequest.SolutionName = solutionUniqueName;
+                exportSolutionRequest.Managed = Convert.ToBoolean(solution.Managed);
+                exportSolutionRequest.SolutionName = solution.UniqueName;
 
                 var exportSolutionResponse = await orgService.ExecuteAsync<ExportSolutionResponse>(exportSolutionRequest, logger);
 
                 // var exportSolutionResponse = (ExportSolutionResponse)orgService.Execute(exportSolutionRequest);
                 byte[] exportXml = exportSolutionResponse.ExportSolutionFile;
 
-                string filename = solutionUniqueName + (managed ? "_managed" : "") + ".zip";
+                string filename = $"{solution.UniqueName}{FormatVersion(solution.Version)}.zip";
                 if (!string.IsNullOrEmpty(exportPath))
-                    filename = Path.GetFullPath(exportPath) + '\\' + solutionUniqueName + (managed ? "_managed" : "") + ".zip";
+                    filename = Path.GetFullPath(exportPath) + '\\' + filename;
 
                 File.WriteAllBytes(filename, exportXml);
 
-                logger.Log($"Exported {solutionUniqueName} to {filename} successfully.");
+                logger.Log($"Exported {solution.UniqueName} to {filename} successfully.");
 
                 return true;
             }
@@ -67,10 +67,15 @@ namespace ExportSolution
             var taskList = new List<Task>();
             foreach (var solution in configuration.Solutions)
             {
-                taskList.Add(ExportSolutionZip(orgService, logger, solution.UniqueName, Convert.ToBoolean(solution.Managed), configuration.ExportPath));
+                taskList.Add(ExportSolutionZip(orgService, logger, solution, configuration.ExportPath));
             }
 
             Task.WaitAll(taskList.ToArray());
+        }
+
+        private static string FormatVersion(string version)
+        {
+            return $"_{version.Replace('.', '_')}";
         }
 
         public static void ExecuteExtractScript(Logger logger, ExportConfiguration configuration)

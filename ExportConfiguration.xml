@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ExportConfiguration>
-  <Connection UID="" PWD="" EndPoint=""/>
+  <Connection UID="onmicrosoft.com" PWD="@366" EndPoint=""/>
   <Solutions>
-    <Solution UniqueName="" Managed="false"/>
-    <Solution UniqueName="" Managed="false"/>
-    <Solution UniqueName="" Managed="false"/>
-    <Solution UniqueName="" Managed="false"/>
+    <Solution UniqueName="dd" Version="sds" Managed="fff" ExportedName="f"/>
+    <Solution UniqueName="dd" Version="sds" Managed="fff" ExportedName="f"/>
+    <Solution UniqueName="dd" Version="sds" Managed="fff" ExportedName="f"/>
+    <Solution UniqueName="dd" Version="sds" Managed="fff" ExportedName="f"/>
+    <Solution UniqueName="dd" Version="sds" Managed="fff" ExportedName="f"/>
   </Solutions>
-  <ExportPath>..\..\PkgFolder</ExportPath>
+  <ExportPath>Solutions</ExportPath>
   <ExtractScript>..\..\Extract.bat</ExtractScript>
   <ExtractScriptArgs>..\..\..\</ExtractScriptArgs>
 </ExportConfiguration>
