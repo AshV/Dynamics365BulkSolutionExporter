@@ -40,7 +40,7 @@ namespace ExportSolution
                 exportSolutionRequest.Managed = Convert.ToBoolean(solution.Managed);
                 exportSolutionRequest.SolutionName = solution.UniqueName;
 
-                //   var exportSolutionResponse = await orgService.ExecuteAsync<ExportSolutionResponse>(exportSolutionRequest, logger);
+                //  var exportSolutionResponse = await orgService.ExecuteAsync<ExportSolutionResponse>(exportSolutionRequest, logger);
 
                 var exportSolutionResponse = (ExportSolutionResponse)orgService.Execute(exportSolutionRequest);
                 byte[] exportXml = exportSolutionResponse.ExportSolutionFile;
@@ -64,13 +64,18 @@ namespace ExportSolution
 
         public static void ExportAllSolutions(IOrganizationService orgService, Logger logger, ExportConfiguration configuration)
         {
-            var taskList = new List<Task>();
-            foreach (var solution in configuration.Solutions)
-            {
-                taskList.Add(ExportSolutionZip(orgService, logger, solution, configuration.ExportPath));
-            }
+            //  var taskList = new List<Task>();
+            //  foreach (var solution in configuration.Solutions)
+            //  {
+            //      taskList.Add(ExportSolutionZip(orgService, logger, solution, configuration.ExportPath));
+            //  }
 
-            Task.WaitAll(taskList.ToArray());
+            //  Task.WaitAll(taskList.ToArray());
+
+            Parallel.ForEach(configuration.Solutions, (task) =>
+            {
+                ExportSolutionZip(orgService, logger, task, configuration.ExportPath);
+            });
         }
 
         private static string FormatVersion(string version)

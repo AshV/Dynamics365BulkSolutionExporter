@@ -1,0 +1,94 @@
+11/7/2017 12:20:44 PM -> -------------------------------------------------------------
+Logger Instance Created at 11/7/2017 12:20:44 PM
+
+11/7/2017 12:20:44 PM -> Starting Configuration Parsing.
+11/7/2017 12:20:49 PM -> Started exporting WorkOrderDocumentActions
+11/7/2017 12:20:49 PM -> Started exporting AppsTeodora
+11/7/2017 12:20:49 PM -> Started exporting ribbonissue
+11/7/2017 12:20:49 PM -> Started exporting WODTAction
+11/7/2017 12:20:49 PM -> Started exporting IKEA_Assemblies
+11/7/2017 12:20:49 PM -> Started exporting AUG4Export
+11/7/2017 12:20:49 PM -> Started exporting FDDSE07WorkOrderRK
+11/7/2017 12:20:49 PM -> Started exporting FDDLE26_Leasing_Integration
+11/7/2017 12:20:49 PM -> Started exporting SecurityImport
+11/7/2017 12:20:49 PM -> Started exporting FDDSE07Release
+11/7/2017 12:20:49 PM -> Started exporting IKEA_Configurations
+11/7/2017 12:20:49 PM -> Started exporting WorkOrderNotification
+11/7/2017 12:20:49 PM -> Started exporting AppConfig
+11/7/2017 12:20:49 PM -> Started exporting WorkOrderRibbonSolution
+11/7/2017 12:20:49 PM -> Started exporting IKEA_Processes
+11/7/2017 12:20:49 PM -> Started exporting WOdoctemplateport
+11/7/2017 12:21:18 PM -> Exported WorkOrderDocumentActions to WorkOrderDocumentActions_1_0_0_0.zip successfully.
+11/7/2017 12:21:19 PM -> Exported AppsTeodora to AppsTeodora_1_0_0_0.zip successfully.
+11/7/2017 12:21:53 PM -> Exported WODTAction to WODTAction_1_0_0_0.zip successfully.
+11/7/2017 12:21:53 PM -> Exported ribbonissue to ribbonissue_1_0_0_0.zip successfully.
+11/7/2017 12:22:37 PM -> Exported IKEA_Assemblies to IKEA_Assemblies_1_0_0_1.zip successfully.
+11/7/2017 12:22:47 PM -> Exported AUG4Export to AUG4Export_1_0_0_0.zip successfully.
+11/7/2017 12:22:53 PM -> The request channel timed out while waiting for a reply after 00:00:15.0470617. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+SolutionName : FDDSE07WorkOrderRK
+Managed : False
+
+11/7/2017 12:22:54 PM -> The request channel timed out attempting to send after 00:02:00. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+SolutionName : SecurityImport
+Managed : False
+
+11/7/2017 12:22:55 PM -> The request channel timed out while waiting for a reply after 00:00:01.7750457. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+SolutionName : FDDSE07Release
+Managed : False
+
+11/7/2017 12:22:56 PM -> The request channel timed out while waiting for a reply after 00:00:02.4635869. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+SolutionName : IKEA_Configurations
+Managed : False
+
+11/7/2017 12:22:57 PM -> The request channel timed out while waiting for a reply after 00:00:01.7500161. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+SolutionName : WorkOrderNotification
+Managed : False
+
+11/7/2017 12:22:58 PM -> The request channel timed out attempting to send after 00:02:00. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+SolutionName : AppConfig
+Managed : False
+
+11/7/2017 12:22:59 PM -> The request channel timed out attempting to send after 00:02:00. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+SolutionName : WorkOrderRibbonSolution
+Managed : False
+
+11/7/2017 12:23:00 PM -> The request channel timed out while waiting for a reply after 00:00:03.7688888. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+SolutionName : IKEA_Processes
+Managed : False
+
+11/7/2017 12:23:01 PM -> The request channel timed out while waiting for a reply after 00:00:03.7624189. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+SolutionName : WOdoctemplateport
+Managed : False
+
+11/7/2017 12:23:03 PM -> OrganizationService not initialized waiting for 1 second.
+11/7/2017 12:23:03 PM -> OrganizationService not initialized waiting for 1 second.
+11/7/2017 12:23:04 PM -> Exec WhoAmIRequest
+11/7/2017 12:23:04 PM -> OrganizationService not initialized waiting for 1 second.
+11/7/2017 12:23:05 PM -> Exec WhoAmIRequest
+11/7/2017 12:23:05 PM -> OrganizationService not initialized waiting for 1 second.
+11/7/2017 12:23:05 PM -> Exec WhoAmIRequest
+11/7/2017 12:23:05 PM -> OrganizationService not initialized waiting for 1 second.
+11/7/2017 12:23:06 PM -> Exec WhoAmIRequest
+11/7/2017 12:23:06 PM -> Exec WhoAmIRequest
+11/7/2017 12:23:06 PM -> OrganizationService not initialized waiting for 1 second.
+11/7/2017 12:23:07 PM -> OrganizationService not initialized waiting for 1 second.
+11/7/2017 12:23:07 PM -> OrganizationService not initialized waiting for 1 second.
+11/7/2017 12:23:08 PM -> End WhoAmIRequest
+11/7/2017 12:23:08 PM -> Object reference not set to an instance of an object.
+11/7/2017 12:23:08 PM -> End WhoAmIRequest
+11/7/2017 12:23:08 PM -> Object reference not set to an instance of an object.
+11/7/2017 12:23:08 PM -> Exec WhoAmIRequest
+11/7/2017 12:23:08 PM -> Exec WhoAmIRequest
+11/7/2017 12:23:09 PM -> End WhoAmIRequest
+11/7/2017 12:23:09 PM -> Object reference not set to an instance of an object.
+11/7/2017 12:23:09 PM -> End WhoAmIRequest
+11/7/2017 12:23:09 PM -> Object reference not set to an instance of an object.
+11/7/2017 12:23:10 PM -> End WhoAmIRequest
+11/7/2017 12:23:10 PM -> Object reference not set to an instance of an object.
+11/7/2017 12:23:10 PM -> Exception Log : One or more errors occurred.,    at System.Threading.Tasks.Task.WaitAll(Task[] tasks, Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.WaitAll(Task[] tasks, Int32 millisecondsTimeout)
+   at System.Threading.Tasks.Task.WaitAll(Task[] tasks)
+   at ExportSolution.ExportSolution.ExportAllSolutions(IOrganizationService orgService, Logger logger, ExportConfiguration configuration) in C:\GitHub\Dynamics365BulkSolutionExporter\ExportSolution.cs:line 73
+   at ExportSolution.Program.Main(String[] args) in C:\GitHub\Dynamics365BulkSolutionExporter\Program.cs:line 64
+, WaitAll at offset 1090 in file:line:column <filename unknown>:0:0
+, 0

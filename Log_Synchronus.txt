@@ -1,0 +1,36 @@
+11/7/2017 12:07:39 PM -> -------------------------------------------------------------
+Logger Instance Created at 11/7/2017 12:07:39 PM
+
+11/7/2017 12:07:39 PM -> Starting Configuration Parsing.
+11/7/2017 12:07:51 PM -> Started exporting WorkOrderDocumentActions
+11/7/2017 12:08:23 PM -> Exported WorkOrderDocumentActions to WorkOrderDocumentActions_1_0_0_0.zip successfully.
+11/7/2017 12:08:23 PM -> Started exporting AppsTeodora
+11/7/2017 12:09:00 PM -> Exported AppsTeodora to AppsTeodora_1_0_0_0.zip successfully.
+11/7/2017 12:09:00 PM -> Started exporting ribbonissue
+11/7/2017 12:09:37 PM -> Exported ribbonissue to ribbonissue_1_0_0_0.zip successfully.
+11/7/2017 12:09:37 PM -> Started exporting WODTAction
+11/7/2017 12:10:10 PM -> Exported WODTAction to WODTAction_1_0_0_0.zip successfully.
+11/7/2017 12:10:10 PM -> Started exporting IKEA_Assemblies
+11/7/2017 12:10:48 PM -> Exported IKEA_Assemblies to IKEA_Assemblies_1_0_0_1.zip successfully.
+11/7/2017 12:10:48 PM -> Started exporting AUG4Export
+11/7/2017 12:11:50 PM -> Exported AUG4Export to AUG4Export_1_0_0_0.zip successfully.
+11/7/2017 12:11:50 PM -> Started exporting FDDSE07WorkOrderRK
+11/7/2017 12:12:21 PM -> Exported FDDSE07WorkOrderRK to FDDSE07WorkOrderRK_1_0_0_0.zip successfully.
+11/7/2017 12:12:21 PM -> Started exporting FDDLE26_Leasing_Integration
+11/7/2017 12:12:54 PM -> Exported FDDLE26_Leasing_Integration to FDDLE26_Leasing_Integration_1_0_0_0.zip successfully.
+11/7/2017 12:12:54 PM -> Started exporting SecurityImport
+11/7/2017 12:13:25 PM -> Exported SecurityImport to SecurityImport_1_0_0_0.zip successfully.
+11/7/2017 12:13:25 PM -> Started exporting FDDSE07Release
+11/7/2017 12:13:55 PM -> Exported FDDSE07Release to FDDSE07Release_1_0_0_0.zip successfully.
+11/7/2017 12:13:55 PM -> Started exporting IKEA_Configurations
+11/7/2017 12:15:26 PM -> Exported IKEA_Configurations to IKEA_Configurations_1_0_0_1.zip successfully.
+11/7/2017 12:15:26 PM -> Started exporting WorkOrderNotification
+11/7/2017 12:16:02 PM -> Exported WorkOrderNotification to WorkOrderNotification_1_0_0_3.zip successfully.
+11/7/2017 12:16:02 PM -> Started exporting AppConfig
+11/7/2017 12:16:38 PM -> Exported AppConfig to AppConfig_1_0_0_0.zip successfully.
+11/7/2017 12:16:38 PM -> Started exporting WorkOrderRibbonSolution
+11/7/2017 12:17:22 PM -> Exported WorkOrderRibbonSolution to WorkOrderRibbonSolution_1_0_0_0.zip successfully.
+11/7/2017 12:17:22 PM -> Started exporting IKEA_Processes
+11/7/2017 12:17:53 PM -> Exported IKEA_Processes to IKEA_Processes_1_0_0_1.zip successfully.
+11/7/2017 12:17:53 PM -> Started exporting WOdoctemplateport
+11/7/2017 12:18:25 PM -> Exported WOdoctemplateport to WOdoctemplateport_1_0_0_0.zip successfully.

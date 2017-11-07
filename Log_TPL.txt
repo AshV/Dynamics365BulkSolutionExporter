@@ -1,0 +1,45 @@
+11/7/2017 12:33:04 PM -> -------------------------------------------------------------
+Logger Instance Created at 11/7/2017 12:33:04 PM
+
+11/7/2017 12:33:04 PM -> Starting Configuration Parsing.
+11/7/2017 12:33:09 PM -> Started exporting WorkOrderDocumentActions
+11/7/2017 12:33:09 PM -> Started exporting SecurityImport
+11/7/2017 12:33:09 PM -> Started exporting AppsTeodora
+11/7/2017 12:33:09 PM -> Started exporting IKEA_Assemblies
+11/7/2017 12:33:09 PM -> Started exporting AppConfig
+11/7/2017 12:33:10 PM -> Started exporting AUG4Export
+11/7/2017 12:33:11 PM -> Started exporting FDDSE07Release
+11/7/2017 12:33:12 PM -> Started exporting WorkOrderRibbonSolution
+11/7/2017 12:33:13 PM -> Started exporting ribbonissue
+11/7/2017 12:33:14 PM -> Started exporting FDDSE07WorkOrderRK
+11/7/2017 12:33:15 PM -> Started exporting IKEA_Configurations
+11/7/2017 12:33:16 PM -> Started exporting IKEA_Processes
+11/7/2017 12:33:17 PM -> Started exporting WODTAction
+11/7/2017 12:33:18 PM -> Started exporting FDDLE26_Leasing_Integration
+11/7/2017 12:33:19 PM -> Started exporting WorkOrderNotification
+11/7/2017 12:33:19 PM -> Started exporting WOdoctemplateport
+11/7/2017 12:33:55 PM -> Exported AppConfig to AppConfig_1_0_0_0.zip successfully.
+11/7/2017 12:33:59 PM -> Exported IKEA_Assemblies to IKEA_Assemblies_1_0_0_1.zip successfully.
+11/7/2017 12:34:24 PM -> Exported WorkOrderDocumentActions to WorkOrderDocumentActions_1_0_0_0.zip successfully.
+11/7/2017 12:34:31 PM -> Exported SecurityImport to SecurityImport_1_0_0_0.zip successfully.
+11/7/2017 12:35:04 PM -> Exported AppsTeodora to AppsTeodora_1_0_0_0.zip successfully.
+11/7/2017 12:35:11 PM -> The request channel timed out while waiting for a reply after 00:00:46.8806007. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+11/7/2017 12:35:11 PM -> The request channel timed out attempting to send after 00:02:00. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+11/7/2017 12:35:12 PM -> The request channel timed out while waiting for a reply after 00:00:08.8857041. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+11/7/2017 12:35:13 PM -> The request channel timed out while waiting for a reply after 00:00:02.0269335. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+11/7/2017 12:35:14 PM -> The request channel timed out attempting to send after 00:02:00. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+11/7/2017 12:35:15 PM -> The request channel timed out attempting to send after 00:02:00. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+11/7/2017 12:35:16 PM -> The request channel timed out attempting to send after 00:02:00. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+11/7/2017 12:35:17 PM -> The request channel timed out attempting to send after 00:02:00. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+11/7/2017 12:35:18 PM -> The request channel timed out while waiting for a reply after 00:00:05.2593188. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+11/7/2017 12:35:19 PM -> The request channel timed out while waiting for a reply after 00:00:05.7482790. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+11/7/2017 12:35:19 PM -> The request channel timed out while waiting for a reply after 00:00:01.2559351. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+Your tracing logs has been written to C:\GitHub\Dynamics365BulkSolutionExporter\bin\Debug\Logs_ifeonvj3.vzi.txt
+
+Unhandled Exception: System.ComponentModel.Win32Exception: The system cannot find the file specified
+   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start()
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start(String fileName)
+   at ExportSolution.Connect.OnProcessExit(Object sender, EventArgs e)
+Press any key to continue . . .

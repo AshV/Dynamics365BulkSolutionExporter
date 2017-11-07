@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ExportConfiguration>
-  <Connection UID="" PWD="" EndPoint=""/>
+  <Connection UID="Ashish@AshishV.onmicrosoft.com" PWD="Secret" EndPoint="https://ashishv.api.crm.dynamics.com/XRMServices/2011/Organization.svc"/>
   <Solutions>
     <Solution UniqueName="" Version="" Managed="" ExportedName=""/>
   </Solutions>
