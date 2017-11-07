@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Client;
+using Microsoft.Xrm.Tooling.Connector;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -20,13 +21,21 @@ namespace ExportSolution
         {
             try
             {
-                ClientCredentials credentials = new ClientCredentials();
-                credentials.UserName.UserName = userName;
-                credentials.UserName.Password = password;
+                // Connect to the CRM web service using a connection string.
+                CrmServiceClient conn = new CrmServiceClient($@"Url=https://ashishv.crm.dynamics.com; Username={userName}; Password={password}; authtype=Office365");
 
-                OrganizationServiceProxy proxy = new OrganizationServiceProxy(new Uri(orgServiceUri), null, credentials, null);
-                proxy.EnableProxyTypes();
-                return proxy;
+                // Cast the proxy client to the IOrganizationService interface.
+                return (IOrganizationService)conn.OrganizationWebProxyClient != null ? (IOrganizationService)conn.OrganizationWebProxyClient : (IOrganizationService)conn.OrganizationServiceProxy;
+
+
+
+                //ClientCredentials credentials = new ClientCredentials();
+                //credentials.UserName.UserName = userName;
+                //credentials.UserName.Password = password;
+
+                //OrganizationServiceProxy proxy = new OrganizationServiceProxy(new Uri(orgServiceUri), null, credentials, null);
+                //proxy.EnableProxyTypes();
+                //return proxy;
             }
             catch (Exception ex)
             {
