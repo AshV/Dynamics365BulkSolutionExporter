@@ -40,9 +40,9 @@ namespace ExportSolution
                 exportSolutionRequest.Managed = Convert.ToBoolean(solution.Managed);
                 exportSolutionRequest.SolutionName = solution.UniqueName;
 
-                  var exportSolutionResponse = await orgService.ExecuteAsync<ExportSolutionResponse>(exportSolutionRequest, logger);
+                var exportSolutionResponse = await orgService.ExecuteAsync<ExportSolutionResponse>(exportSolutionRequest, logger);
 
-              //  var exportSolutionResponse = (ExportSolutionResponse)orgService.Execute(exportSolutionRequest);
+                //  var exportSolutionResponse = (ExportSolutionResponse)orgService.Execute(exportSolutionRequest);
                 byte[] exportXml = exportSolutionResponse.ExportSolutionFile;
 
                 string filename = $"{solution.UniqueName}{FormatVersion(solution.Version)}.zip";
@@ -67,7 +67,9 @@ namespace ExportSolution
             var taskList = new List<Task>();
             foreach (var solution in configuration.Solutions)
             {
-                taskList.Add(ExportSolutionZip(orgService, logger, solution, configuration.ExportPath));
+                taskList.Add(ExportSolutionZip(Connect.GetOrganizationService(configuration.Connection.UID,
+                    configuration.Connection.PWD,
+                    configuration.Connection.EndPoint, logger), logger, solution, configuration.ExportPath));
             }
 
             Task.WaitAll(taskList.ToArray());

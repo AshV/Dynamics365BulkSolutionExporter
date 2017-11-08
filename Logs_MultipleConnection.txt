@@ -1,0 +1,43 @@
+11/8/2017 7:15:00 PM -> -------------------------------------------------------------
+Logger Instance Created at 11/8/2017 7:15:00 PM
+
+11/8/2017 7:15:00 PM -> Starting Configuration Parsing.
+11/8/2017 7:15:18 PM -> Started exporting WorkOrderDocumentActions
+11/8/2017 7:15:18 PM -> Started exporting AppsTeodora
+11/8/2017 7:15:18 PM -> Started exporting ribbonissue
+11/8/2017 7:15:18 PM -> Started exporting WODTAction
+11/8/2017 7:15:18 PM -> Started exporting IKEA_Assemblies
+11/8/2017 7:15:18 PM -> Started exporting AUG4Export
+11/8/2017 7:15:18 PM -> Started exporting FDDSE07WorkOrderRK
+11/8/2017 7:15:18 PM -> Started exporting FDDLE26_Leasing_Integration
+11/8/2017 7:15:18 PM -> Started exporting SecurityImport
+11/8/2017 7:15:18 PM -> Started exporting FDDSE07Release
+11/8/2017 7:15:18 PM -> Started exporting IKEA_Configurations
+11/8/2017 7:15:18 PM -> Started exporting WorkOrderNotification
+11/8/2017 7:15:18 PM -> Started exporting AppConfig
+11/8/2017 7:15:18 PM -> Started exporting WorkOrderRibbonSolution
+11/8/2017 7:15:18 PM -> Started exporting IKEA_Processes
+11/8/2017 7:15:18 PM -> Started exporting WOdoctemplateport
+11/8/2017 7:15:56 PM -> Exported ribbonissue to ribbonissue_1_0_0_0.zip successfully.
+11/8/2017 7:16:06 PM -> Exported WorkOrderDocumentActions to WorkOrderDocumentActions_1_0_0_0.zip successfully.
+11/8/2017 7:16:07 PM -> Exported FDDSE07WorkOrderRK to FDDSE07WorkOrderRK_1_0_0_0.zip successfully.
+11/8/2017 7:16:09 PM -> Exported SecurityImport to SecurityImport_1_0_0_0.zip successfully.
+11/8/2017 7:16:09 PM -> Exported WODTAction to WODTAction_1_0_0_0.zip successfully.
+11/8/2017 7:16:12 PM -> Exported AppsTeodora to AppsTeodora_1_0_0_0.zip successfully.
+11/8/2017 7:16:12 PM -> Exported FDDSE07Release to FDDSE07Release_1_0_0_0.zip successfully.
+11/8/2017 7:16:16 PM -> Exported AUG4Export to AUG4Export_1_0_0_0.zip successfully.
+11/8/2017 7:16:20 PM -> Exported IKEA_Processes to IKEA_Processes_1_0_0_1.zip successfully.
+11/8/2017 7:16:24 PM -> Exported WorkOrderRibbonSolution to WorkOrderRibbonSolution_1_0_0_0.zip successfully.
+11/8/2017 7:16:24 PM -> Exported AppConfig to AppConfig_1_0_0_0.zip successfully.
+11/8/2017 7:16:26 PM -> Exported WOdoctemplateport to WOdoctemplateport_1_0_0_0.zip successfully.
+11/8/2017 7:16:28 PM -> Exported FDDLE26_Leasing_Integration to FDDLE26_Leasing_Integration_1_0_0_0.zip successfully.
+11/8/2017 7:16:33 PM -> Exported WorkOrderNotification to WorkOrderNotification_1_0_0_3.zip successfully.
+11/8/2017 7:16:42 PM -> Exported IKEA_Assemblies to IKEA_Assemblies_1_0_0_1.zip successfully.
+11/8/2017 7:17:25 PM -> The request channel timed out while waiting for a reply after 00:01:59.7748775. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+SolutionName : IKEA_Configurations
+Managed : False
+
+11/8/2017 7:27:18 PM -> OrganizationService not initialized waiting for 1 second.
+11/8/2017 7:27:19 PM -> Exec WhoAmIRequest
+11/8/2017 7:27:19 PM -> End WhoAmIRequest
+11/8/2017 7:27:19 PM -> Object reference not set to an instance of an object.

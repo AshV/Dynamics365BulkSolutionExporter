@@ -66,6 +66,7 @@ namespace ExportSolution
                     logger,
                     new ExportConfiguration()
                     {
+                        Connection=configuration.Connection,
                         Solutions = exportSolutionData.ToArray()
                     });
 
