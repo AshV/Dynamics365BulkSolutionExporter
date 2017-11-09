@@ -20,8 +20,8 @@ namespace AshV.BulkSolutionExporter.Core
                 byte[] exportXml = exportSolutionResponse.ExportSolutionFile;
 
                 var managed = exportSolutionRequest.Managed ? "_managed" : string.Empty;
-                string filename = $"{exportSolutionRequest.SolutionName}{FormatVersion(solution.Version)}{managed}.zip";
-              //  string filename = $"{exportSolutionRequest.SolutionName}{FormatVersion(solution.Version)}{managed}.zip";
+                string filename = $"{exportSolutionRequest.SolutionName}{managed}.zip";
+                //  string filename = $"{exportSolutionRequest.SolutionName}{FormatVersion(solution.Version)}{managed}.zip";
 
                 if (!string.IsNullOrEmpty(exportPath))
                     filename = $"{Path.GetFullPath(exportPath)}\\{filename}";
@@ -43,7 +43,7 @@ namespace AshV.BulkSolutionExporter.Core
         {
             Parallel.ForEach(configuration.Solutions, (task) =>
             {
-                ExportSolutionZip(orgService, logger, new ExportSolutionRequest(), new Solution(), "root");
+                ExportSolutionZip(orgService, logger, new ExportSolutionRequest(), "root");
             });
         }
 

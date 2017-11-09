@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Childs.cs" />
+    <Compile Include="Config.cs" />
     <Compile Include="Connect.cs" />
     <Compile Include="ExecuteAsyncExtension.cs" />
     <Compile Include="ExportConfiguration.cs" />
