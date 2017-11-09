@@ -4,7 +4,7 @@
   <Solutions>
     <Solution UniqueName="" Version="" Managed="" ExportedName=""/>
   </Solutions>
-  <ExportPath></ExportPath>
-  <ExtractScript></ExtractScript>
+  <ExportPath>true</ExportPath>
+  <ExtractScript>yes</ExtractScript>
   <ExtractScriptArgs></ExtractScriptArgs>
 </ExportConfiguration>
