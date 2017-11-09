@@ -31,6 +31,10 @@ namespace ExportSolution
                     configuration.Connection.EndPoint,
                     logger);
 
+
+                Childs.QueryChildAccounts(GlobalServiceObject.orgService, new Guid("{8435CDE7-ABC0-E711-A826-000D3AB48443}"));
+
+
                 var sols = GlobalServiceObject.orgService.RetrieveMultiple(new QueryExpression("solution")
                 {
                     ColumnSet = new ColumnSet(true),
@@ -66,7 +70,7 @@ namespace ExportSolution
                     logger,
                     new ExportConfiguration()
                     {
-                        Connection=configuration.Connection,
+                        Connection = configuration.Connection,
                         Solutions = exportSolutionData.ToArray()
                     });
 

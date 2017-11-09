@@ -94,6 +94,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Childs.cs" />
     <Compile Include="Connect.cs" />
     <Compile Include="ExecuteAsyncExtension.cs" />
     <Compile Include="ExportConfiguration.cs" />
