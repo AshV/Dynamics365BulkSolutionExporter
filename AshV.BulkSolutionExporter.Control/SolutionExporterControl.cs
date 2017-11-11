@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using XrmToolBox.Extensibility;
 using Microsoft.Crm.Sdk.Messages;
 
+using AshV.BulkSolutionExporter.Core;
+
 namespace AshV.BulkSolutionExporter.Control
 {
     public partial class SolutionExporterControl : PluginControlBase
@@ -17,6 +19,20 @@ namespace AshV.BulkSolutionExporter.Control
         public SolutionExporterControl()
         {
             InitializeComponent();
+        }
+
+        public void GetSolutions()
+        {
+            MessageBox.Show("1");
+            WorkAsync(new WorkAsyncInfo
+            {
+                Message = "Retrieving Solutions...",
+                Work = (w, e) =>
+                {
+                    var solutions = Retriever.RetriveAllUnmanagedSolutions(Service, Logger.GetLogger("Retrieve Logd"));
+                    solutions.ForEach(s => { listView1.Items.Add(s.UniqueName); });
+                }
+            });
         }
 
         public void ProcessWhoAmI()
@@ -55,7 +71,7 @@ namespace AshV.BulkSolutionExporter.Control
 
         private void BtnWhoAmIClick(object sender, EventArgs e)
         {
-            ExecuteMethod(ProcessWhoAmI); // ExecuteMethod ensures that the user has connected to CRM, before calling the call back method
+            ExecuteMethod(GetSolutions); // ExecuteMethod ensures that the user has connected to CRM, before calling the call back method
         }
 
 

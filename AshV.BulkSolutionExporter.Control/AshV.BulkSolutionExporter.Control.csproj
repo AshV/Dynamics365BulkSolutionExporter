@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>C:\Users\AshV\AppData\Roaming\MscrmTools\XrmToolBox\Plugins\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -118,6 +118,12 @@
     <EmbeddedResource Include="SolutionExporterControl.resx">
       <DependentUpon>SolutionExporterControl.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AshV.BulkSolutionExporter.Core\AshV.BulkSolutionExporter.Core.csproj">
+      <Project>{c116b444-115d-4589-bd0b-55eeb00b02d2}</Project>
+      <Name>AshV.BulkSolutionExporter.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace AshV.BulkSolutionExporter.Core
 {
-    class Retriever
+    public class Retriever
     {
         public static List<Solution> RetriveAllUnmanagedSolutions(IOrganizationService service, Logger logger)
         {
