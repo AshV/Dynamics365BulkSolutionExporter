@@ -19,7 +19,7 @@ namespace AshV.BulkSolutionExporter.Core
             }
         }
 
-        private static List<ConfigurationExportSolutionRequest> requestList { get; set; }
+        private static List<ConfigurationExportSolutionRequest> requestList = new List<ConfigurationExportSolutionRequest>();
 
         private static Configuration exportConfiguration = new Configuration();
 

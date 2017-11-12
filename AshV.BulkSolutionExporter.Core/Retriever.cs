@@ -29,7 +29,7 @@ namespace AshV.BulkSolutionExporter.Core
             solutions.Entities.ToList().ForEach(solution =>
             {
                 var sol = solution.ToEntity<Solution>();
-                logger.Log($"Solution {counter++} -> LogicalName[{sol.LogicalName}] UniqueName[{sol.UniqueName}] FriendlyName[{sol.FriendlyName}].");
+                logger.Log($"Solution {++counter} -> UniqueName[{sol.UniqueName}] FriendlyName[{sol.FriendlyName}].");
                 solutionList.Add(sol);
             });
 

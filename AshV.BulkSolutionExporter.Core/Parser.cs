@@ -1,12 +1,53 @@
 ﻿using Microsoft.Crm.Sdk.Messages;
 using System;
-using System.Collections.Generic;
-using System.Text;
+using System.IO;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace AshV.BulkSolutionExporter.Core
 {
-    class Parser
+    public class Parser
     {
+        public static Configuration ConfigurationXmlDeserializer(Logger logger, string fileName)
+        {
+            try
+            {
+                logger.Log("Starting Configuration Deserializing.");
+                var xmlSerializer = new XmlSerializer(typeof(Configuration));
+                using (var streamReader = new StreamReader(fileName))
+                {
+                    return (Configuration)xmlSerializer.Deserialize(streamReader);
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Log($"Configuration Deserializing Failed. {ex.Message}");
+                throw;
+            }
+        }
+
+        public static string ConfigurationXmlSerializer(Logger logger, Configuration configuration)
+        {
+            try
+            {
+                logger.Log("Starting Configuration Serializing.");
+                var xmlSerializer = new XmlSerializer(typeof(Configuration));
+                using (var stringWriter = new StringWriter())
+                {
+                    using (var xmlWriter = XmlWriter.Create(stringWriter))
+                    {
+                        xmlSerializer.Serialize(xmlWriter, configuration);
+                        return stringWriter.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Log($"Configuration Serializing Failed. {ex.Message}");
+                throw;
+            }
+        }
+
         static void DummY()
         {
             var a = new ExportSolutionRequest().ExportAutoNumberingSettings;
