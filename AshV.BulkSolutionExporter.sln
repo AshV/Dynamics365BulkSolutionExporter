@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AshV.BulkSolutionExporter.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AshV.BulkSolutionExporter.Control", "AshV.BulkSolutionExporter.Control\AshV.BulkSolutionExporter.Control.csproj", "{4E03D64D-7421-4CD6-8987-EC7C1B456CAB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AshV.BulkSolutionExporter.Console", "AshV.BulkSolutionExporter.Console\AshV.BulkSolutionExporter.Console.csproj", "{AFCE56A0-655F-4A9F-BFF3-2436845B6530}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4E03D64D-7421-4CD6-8987-EC7C1B456CAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E03D64D-7421-4CD6-8987-EC7C1B456CAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E03D64D-7421-4CD6-8987-EC7C1B456CAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFCE56A0-655F-4A9F-BFF3-2436845B6530}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFCE56A0-655F-4A9F-BFF3-2436845B6530}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFCE56A0-655F-4A9F-BFF3-2436845B6530}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFCE56A0-655F-4A9F-BFF3-2436845B6530}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
