@@ -7,17 +7,17 @@ using System.Text;
 
 namespace AshV.BulkSolutionExporter.Core
 {
-    class Connector
+   public class Connector
     {
         static string filePath = "";
 
 
-        public static IOrganizationService GetOrganizationService(string userName, string password, string orgServiceUri, Logger logger)
+        public static IOrganizationService GetOrganizationService(string userName, string password, string loginUri, Logger logger)
         {
             try
             {
                 // Connect to the CRM web service using a connection string.
-                var conn = new CrmServiceClient($@"Url=https://AshishV.crm.dynamics.com; Username={userName}; Password={password}; authtype=Office365");
+                var conn = new CrmServiceClient($@"Url={loginUri}; Username={userName}; Password={password}; authtype=Office365");
 
                 // Cast the proxy client to the IOrganizationService interface.
                 return conn.OrganizationWebProxyClient != null ? conn.OrganizationWebProxyClient : (IOrganizationService)conn.OrganizationServiceProxy;
