@@ -13,7 +13,7 @@ namespace AshV.BulkSolutionExporter.Core
         {
             try
             {
-                logger.Log($"Started exporting {exportSolutionRequest.SolutionName}");
+                logger.Log($"Started exporting {exportSolutionRequest.SolutionName} - {(exportSolutionRequest.Managed ? "Managed" : "Unmanaged")}");
                 exportSolutionRequest.Managed = Convert.ToBoolean(exportSolutionRequest.Managed);
 
                 var exportSolutionResponse = (ExportSolutionResponse)orgService.Execute(exportSolutionRequest);
@@ -39,11 +39,15 @@ namespace AshV.BulkSolutionExporter.Core
             }
         }
 
-        public static void ExportAllSolutions(IOrganizationService orgService, Logger logger, ExportConfiguration configuration)
+        public static void ExportAllSolutionsParallel(string userName, string password, string loginUri, Logger logger, Configuration configuration)
         {
-            Parallel.ForEach(configuration.Solutions, (task) =>
+            Parallel.ForEach(configuration.ExportSolutionRequest, (task) =>
             {
-                ExportSolutionZip(orgService, logger, new ExportSolutionRequest(), "root");
+                ExportSolutionZip(Connector.GetOrganizationService(userName, password, loginUri, logger), logger, new ExportSolutionRequest
+                {
+                    SolutionName = task.SolutionName,
+                    Managed = task.Managed
+                });
             });
         }
 

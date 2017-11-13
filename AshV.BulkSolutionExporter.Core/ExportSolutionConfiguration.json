@@ -1,0 +1,37 @@
+﻿{
+  "Configuration": {
+    "ExportSolutionRequest": [
+      {
+        "SolutionName": "ABC",
+        "Managed": "true",
+        "ExportAutoNumberingSettings": "true",
+        "ExportCalendarSettings": "true",
+        "ExportCustomizationSettings": "true",
+        "ExportEmailTrackingSettings": "true",
+        "ExportExternalApplications": "true",
+        "ExportGeneralSettings": "true",
+        "ExportIsvConfig": "true",
+        "ExportMarketingSettings": "true",
+        "ExportOutlookSynchronizationSettings": "true",
+        "ExportSales": "true",
+        "TargetVersion": "ABC"
+      },
+      {
+        "SolutionName": "XYZ",
+        "Managed": "false",
+        "ExportAutoNumberingSettings": "false",
+        "ExportCalendarSettings": "false",
+        "ExportCustomizationSettings": "false",
+        "ExportEmailTrackingSettings": "false",
+        "ExportExternalApplications": "false",
+        "ExportGeneralSettings": "false",
+        "ExportIsvConfig": "false",
+        "ExportMarketingSettings": "false",
+        "ExportOutlookSynchronizationSettings": "false",
+        "ExportRelationshipRoles": "false",
+        "ExportSales": "false",
+        "TargetVersion": "false"
+      }
+    ]
+  }
+}

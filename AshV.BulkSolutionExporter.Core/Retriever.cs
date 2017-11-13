@@ -17,7 +17,8 @@ namespace AshV.BulkSolutionExporter.Core
                     Conditions =
                     {
                         new ConditionExpression(nameof(Solution.IsManaged).ToLower(),ConditionOperator.Equal,false),
-                        new ConditionExpression(nameof(Solution.IsVisible).ToLower(),ConditionOperator.Equal,true)
+                        new ConditionExpression(nameof(Solution.IsVisible).ToLower(),ConditionOperator.Equal,true),
+                        new ConditionExpression(nameof(Solution.UniqueName).ToLower(),ConditionOperator.NotEqual,"Default")
                     }
                 }
             });

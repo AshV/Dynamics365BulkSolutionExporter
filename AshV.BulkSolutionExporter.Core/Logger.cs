@@ -19,7 +19,7 @@ namespace AshV.BulkSolutionExporter.Core
         {
             string log = $"{DateTime.Now} -> {string.Format(format, args)}{Environment.NewLine}";
             Console.Write(log);
-            File.AppendAllText(LogFile, log);
+          //  File.AppendAllText(LogFile, log);
         }
 
         public static Logger GetLogger(string logFileName)

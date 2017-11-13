@@ -13,15 +13,19 @@ namespace AshV.BulkSolutionExporter.Console
         static void Main(string[] args)
         {
             var logger = Logger.GetLogger("Log");
-            var solutions = Retriever.RetriveAllUnmanagedSolutions(
-                Connector.GetOrganizationService("Ashish@AshishV.onMicrosoft.com", "p w d", "http://AshishV.crm.dynamics.com", logger),
-                logger);
+            var UID = "Ashish@AshishV.onMicrosoft.com";
+            var PWD = "#";
+            var URI = "http://AshishV.crm.dynamics.com";
+            var service = Connector.GetOrganizationService(UID, PWD, URI, logger);
+            var solutions = Retriever.RetriveAllUnmanagedSolutions(service, logger);
 
             solutions.ForEach(sol => { Configurer.AddSolution(sol); });
 
             var stringConfiguration = Parser.ConfigurationXmlSerializer(logger, Configurer.ExportConfiguration);
 
             File.WriteAllText("cfg.xml", stringConfiguration);
+
+            Exporter.ExportAllSolutionsParallel(UID, PWD, URI, logger, Configurer.ExportConfiguration);
         }
     }
 }

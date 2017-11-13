@@ -7,6 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using Microsoft.Crm.Sdk.Messages;
+using Microsoft.Xrm.Sdk;
+
 namespace AshV.BulkSolutionExporter.Core
 {
     /// <remarks/>
@@ -38,9 +41,8 @@ namespace AshV.BulkSolutionExporter.Core
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class ConfigurationExportSolutionRequest
+    public partial class ConfigurationExportSolutionRequest: OrganizationRequest
     {
-
         private string solutionNameField;
 
         private bool managedField;
