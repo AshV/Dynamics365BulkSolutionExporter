@@ -30,7 +30,9 @@ namespace AshV.BulkSolutionExporter.Control
                 Work = (w, e) =>
                 {
                     var solutions = Retriever.RetriveAllUnmanagedSolutions(Service, Logger.GetLogger("Retrieve Logd"));
-                    solutions.ForEach(s => { listView1.Items.Add(s.UniqueName); });
+                    listBox1.Items.Clear();
+                    listBox1.SelectionMode = SelectionMode.MultiExtended;
+                    solutions.ForEach(s => { listBox1.Items.Add(s.UniqueName); });
                 }
             });
         }
